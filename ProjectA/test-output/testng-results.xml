@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="testSuite" duration-ms="17611" started-at="2020-07-05T19:51:38Z" finished-at="2020-07-05T19:51:56Z">
+    <groups>
+    </groups>
+    <test name="testing" duration-ms="17611" started-at="2020-07-05T19:51:38Z" finished-at="2020-07-05T19:51:56Z">
+      <class name="TestCases.LoginToFB">
+        <test-method status="PASS" signature="reunBeforeEverything()[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="reunBeforeEverything" is-config="true" duration-ms="222" started-at="2020-07-05T19:51:38Z" finished-at="2020-07-05T19:51:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reunBeforeEverything -->
+        <test-method status="PASS" signature="initializeBrowser()[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="initializeBrowser" is-config="true" duration-ms="14121" started-at="2020-07-05T19:51:38Z" finished-at="2020-07-05T19:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="beforeMethod" is-config="true" duration-ms="9" started-at="2020-07-05T19:51:52Z" finished-at="2020-07-05T19:51:52Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void TestCases.LoginToFB.ValidLoginTOFB()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="ValidLoginTOFB()[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="ValidLoginTOFB" duration-ms="884" started-at="2020-07-05T19:51:52Z" finished-at="2020-07-05T19:51:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidLoginTOFB -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="afterMethod" is-config="true" duration-ms="1435" started-at="2020-07-05T19:51:53Z" finished-at="2020-07-05T19:51:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ValidLoginTOFB status=SUCCESS method=LoginToFB.ValidLoginTOFB()[pri:0, instance:TestCases.LoginToFB@5ffead27] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="afterClass" is-config="true" duration-ms="1131" started-at="2020-07-05T19:51:55Z" finished-at="2020-07-05T19:51:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestCases.LoginToFB@5ffead27]" name="afterSuite" is-config="true" duration-ms="860" started-at="2020-07-05T19:51:56Z" finished-at="2020-07-05T19:51:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestCases.LoginToFB -->
+    </test> <!-- testing -->
+  </suite> <!-- testSuite -->
+</testng-results>
