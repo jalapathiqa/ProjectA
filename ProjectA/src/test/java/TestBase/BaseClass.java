@@ -42,7 +42,7 @@ public class BaseClass {
 
 	public String fileLocation = System.getProperty("user.dir") + "./TestData/DataDrivenExcel.xlsx";
 	public String sheetName = "TestSheet";
-	Read_Excel readExcel = new Read_Excel(fileLocation);
+	public Read_Excel readExcel = new Read_Excel(fileLocation);
 
 	@BeforeSuite
 	public void reunBeforeEverything() throws IOException {
