@@ -5,10 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import utilities.WaitHelper;
+
 public class FBLogin_PageObjects {
 
 	WebDriver driver;
-
+	
 	// define user name
 	@FindBy(how = How.ID, using = "email")
 	private WebElement email;

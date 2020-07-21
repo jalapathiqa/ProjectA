@@ -3,11 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RestClient_APITesting.RestAssured_POST">
+      <class name="TestCases.LoginToFB">
         <methods>
-          <include name="Registration"/>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="ValidLoginTOFB"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- RestClient_APITesting.RestAssured_POST -->
+      </class> <!-- TestCases.LoginToFB -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

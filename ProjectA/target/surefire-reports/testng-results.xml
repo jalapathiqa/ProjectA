@@ -1,55 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="FBTestSuite" duration-ms="13690" started-at="2020-07-05T21:50:02Z" finished-at="2020-07-05T21:50:15Z">
+  <suite name="Suite" duration-ms="1053" started-at="2020-07-09T22:05:55Z" finished-at="2020-07-09T22:05:56Z">
     <groups>
     </groups>
-    <test name="FBTest" duration-ms="13690" started-at="2020-07-05T21:50:02Z" finished-at="2020-07-05T21:50:15Z">
-      <class name="TestCases.LoginToFB">
-        <test-method status="PASS" signature="reunBeforeEverything()[pri:0, instance:TestCases.LoginToFB@1700915]" name="reunBeforeEverything" is-config="true" duration-ms="193" started-at="2020-07-05T21:50:02Z" finished-at="2020-07-05T21:50:02Z">
+    <test name="Test" duration-ms="1053" started-at="2020-07-09T22:05:55Z" finished-at="2020-07-09T22:05:56Z">
+      <class name="RestClient_APITesting.Http_GET">
+        <test-method status="PASS" signature="httpGet()[pri:0, instance:RestClient_APITesting.Http_GET@4439f31e]" name="httpGet" duration-ms="890" started-at="2020-07-09T22:05:55Z" finished-at="2020-07-09T22:05:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- reunBeforeEverything -->
-        <test-method status="PASS" signature="initializeBrowser()[pri:0, instance:TestCases.LoginToFB@1700915]" name="initializeBrowser" is-config="true" duration-ms="8494" started-at="2020-07-05T21:50:02Z" finished-at="2020-07-05T21:50:10Z">
+        </test-method> <!-- httpGet -->
+      </class> <!-- RestClient_APITesting.Http_GET -->
+      <class name="RestClient_APITesting.Http_GETwithHeaders">
+        <test-method status="PASS" signature="getAPI()[pri:0, instance:RestClient_APITesting.Http_GETwithHeaders@5dfcfece]" name="getAPI" duration-ms="130" started-at="2020-07-09T22:05:56Z" finished-at="2020-07-09T22:05:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initializeBrowser -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.LoginToFB@1700915]" name="beforeMethod" is-config="true" duration-ms="10" started-at="2020-07-05T21:50:10Z" finished-at="2020-07-05T21:50:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void TestCases.LoginToFB.ValidLoginTOFB()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="ValidLoginTOFB()[pri:0, instance:TestCases.LoginToFB@1700915]" name="ValidLoginTOFB" duration-ms="924" started-at="2020-07-05T21:50:10Z" finished-at="2020-07-05T21:50:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidLoginTOFB -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.LoginToFB@1700915]" name="afterMethod" is-config="true" duration-ms="3126" started-at="2020-07-05T21:50:11Z" finished-at="2020-07-05T21:50:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ValidLoginTOFB status=SUCCESS method=LoginToFB.ValidLoginTOFB()[pri:0, instance:TestCases.LoginToFB@1700915] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestCases.LoginToFB@1700915]" name="afterClass" is-config="true" duration-ms="1107" started-at="2020-07-05T21:50:14Z" finished-at="2020-07-05T21:50:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestCases.LoginToFB@1700915]" name="afterSuite" is-config="true" duration-ms="306" started-at="2020-07-05T21:50:15Z" finished-at="2020-07-05T21:50:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- TestCases.LoginToFB -->
-    </test> <!-- FBTest -->
-  </suite> <!-- FBTestSuite -->
+        </test-method> <!-- getAPI -->
+      </class> <!-- RestClient_APITesting.Http_GETwithHeaders -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

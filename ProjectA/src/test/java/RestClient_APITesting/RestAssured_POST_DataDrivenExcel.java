@@ -14,8 +14,8 @@ import io.restassured.specification.RequestSpecification;
 public class RestAssured_POST_DataDrivenExcel {
 	
 	String fileLocation = "C:\\Users\\Rishi\\Desktop\\Jp_Practice_Final\\TestData\\DataDrivenExcel.xlsx";
-	String sheetName = "TestSheet";
 	Read_Excel readExcel = new Read_Excel(fileLocation);
+	String sheetName = "TestSheet";
 	String testCaseName = "RestAssured";
 
 	@DataProvider(name = "empData")

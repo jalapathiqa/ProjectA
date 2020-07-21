@@ -1,0 +1,269 @@
+	thi is Jalapathi, i am having around 8 years of experience totally into QA,
+	and last 4-5 years i majorly involved in Automation, but not that iam doing 
+	any manual testing, equally i am doing manual testing as well like writing testcases, 
+	executing, defect lifecycle.
+	
+	and with respect to Automation i am having very good exposure into Automation tools 
+	and technologies like Selenium, Selenium Grid, API Automation by HTTP Client/
+	RestAssured, database and verygood in PageObject model, TestNG and Jenkins.
+	
+	and i am having verygood exposure in designing the Automation frame work from scratch
+	and pretty much confortable with existing framework as well.
+	
+	and pretty much confortable with different type of framework approches like DataDriven, 
+	KeyWord driven frameworks.
+	
+	
+	RTPP - real time planning & processing
+	it was running in VB they migrated it into Java, db2 database and Vaadin as UI framwork.
+	
+	
+	equitable bank:
+	trust and privacy by authenticating users, authorizing access to information resources and managing online identities.	
+
+Interview Qs:
+
+Project structure
+
+Agile:
+Agile is an iterative approach to project management and software development,  
+agile team delivers work in small, but consumable, increments.
+It uses incremental, 
+iterative work sequences that are commonly known as sprints.
+- Agile allows teams to deliver a prototype and improve it with every cycle.
+
+Examples of Agile: Scrum, eXtreme Programming (XP)
+Uses: 
+Product owner is alsways available with the teams to answer all the Qs
+Early and Predictable Delivery. ...
+Predictable Costs and Schedule. ...
+Allows for Change. ...
+Improves Quality.
+
+Scrum
+Git
+Jenkins
+Selenium
+Cucumber
+
+
+
+
+1. 	WebDriverWait wait=new WebDriverWait(driver, 20);
+	Element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath( “<xpath”)));
+
+2.	WebDriverWait wait=new WebDriverWait(driver, 20);
+	Element = wait.until(ExpectedConditions.alertIsPresent());
+	
+3.	JavaScriptExecutor is an interface which provides a mechanism to execute Javascript through the Selenium WebDriver. 
+	It provides “executescript” and “executeAsyncScript” methods, to run JavaScript in the context of the currently selected frame or window. 
+	An example of that is:
+	
+	JavascriptExecutor js = (JavascriptExecutor) driver; 
+	js.executeScript("arguments[0].click;",element);
+	
+	//Scroll down
+	((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)");
+	
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+
+4. 	//switch window
+	String handle= driver.getWindowHandle();
+	for (String handle : driver.getWindowHandles()) 
+	{
+	driver.switchTo().window(handle);
+	}
+	
+5. 	//Upoad a file
+	
+	<input type="file" name="uploaded_file" size="50" class="pole_plik">
+	element = driver.find_element_by_id(”uploaded_file")
+	element.send_keys("C:myfile.txt")
+	
+6. 	JavascriptExecutor jse = (JavascriptExecutor) driver;
+	jse.executeScript("document.getElementById(‘Login').value=Test text without sendkeys");
+
+7. 	//Explain how you will login into any site if it is showing any authentication popup for username and password?
+	
+	WebDriverWait wait = new WebDriverWait(driver, 10); 
+	Alert alert = wait.until(ExpectedConditions.alertIsPresent()); 
+	alert.authenticateUsing(new UserAndPassword(**username**, **password**));
+
+8. //parameterization in TextNG (@Test & testng.xml)
+	
+		public class parameter{
+		@Test
+		@Parapers("myName")
+		public void perametertest(String myName){
+		systerm.out.println("Parameter is: "+myName)
+		}
+		}
+		
+		passing paramers in XML file
+		
+		<suite name = "test">
+		<test name="test">
+		<parameter name="myName" value="jp" />
+		<classes>
+		<class name="parameter"/>
+		</classes>
+		</test>
+		</suite>
+		
+9. 	Explain what does @Test(invocationCount=?) and @Test(threadPoolSize=?) indicate.
+	@Test(invocationCount=?) is a parameter that indicates the number of times this method should be invoked.
+	@Test(threadPoolSize=?) is used for executing suites in parallel. Each suite can be run in a separate thread.
+
+	To specify how many times @Test method should be invoked from different threads, 
+	you can use the attribute threadPoolSize along with invocationCount. Example:
+	@Test(threadPoolSize = 3, invocationCount = 10)
+	public void testServer() {
+	}
+		
+		
+10. Q. How do you access the parent of a node with XPath?
+	A. we can use the double dot (..) to point the parent. example: //input[@id='name']/..
+	
+11. Q. How do you get the the Nth sub-element using XPath?
+	A. example: //input[@id='name'][2]
+		example: (//input[@id])[2] OR(//input[@id])[position()=1]
+		
+12. how do you use Class, ID, Attribute Value, Nth Element as CSS selector
+	class = .class
+	id	= #name
+	Attribute Value = [type=submit]
+	tr:nth-child(4)
+	
+13. difference between XPath & CSS
+	with XPAth we can traverse both forward & backward, where as CSS selector only moves forward.
+	
+14. Different Waits in Selenium:
+		Static wait:
+			thread.sleep(5000)
+		
+		ImplicitWait: it's a global wait
+			WebDriver driver = new WebDriver();
+			driver.manage.timeouts().implicitwait(15, TimeUnits.Seconds)
+			
+		Explicit Waits: 
+			WebDriverWait wait = new WebDriverWait(driver,15);
+			wait.until(ExpectedConditions.presenceofElementLocated(By.Id(*elementlocation*);
+			
+			WebDriver driver = new WebDriver();
+			driver.get(http://eenadu.net);
+			WebElement element = (new WebDriverWait(driver, 15)).wait(ExpectedConditions.presenceofElementLocated(driver.find_element(By.Id(*elementlocation*);
+		
+15. POM
+
+	Page Object Model is a design pattern to create Object Repository for web UI elements. 
+	Under this model, for each web page in the application, there should be corresponding page class. 
+	This Page class will find the WebElements of that web page and also contains Page methods which perform operations on those WebElements.
+		
+		
+16. Abstract Class
+	
+	Abstract Methods and Classes. An abstract class is a class that is declared abstract—it may or may not include abstract methods. 
+	Abstract classes cannot be instantiated, but they can be subclassed/extended	.
+		
+		
+17. Exceptions in Selenium:
+
+	1.	ElementClickInterceptedException:
+		when the element click command could not be completed
+		
+	2.	ElementNotInteractableException:
+		when the selenium trying to click on an element but found multiple same elements
+		
+	3. 	ElementNotSelectableException:
+		thrown when trying to select an unselectable element
+		
+	4. 	ElementNotVisibleException:
+		thrown when an element is present on the DOM but it is not visible. (it may be hidden from view or Disabled)
+	
+	5.	ErrorInResponseException:
+		thrown when an error has occured on the server side.
+	
+	6.	InsecureCertificateException:
+		thrown when the security certificates or TLS are expired
+	
+	7. 	InvalidArgumentException:
+		thrown when instead of int you are calling Sting value
+	
+	8.	InvalidSelectorException:
+		thrown ony for XPath is wrong , syntax is wrong and immediately it will throw this exception
+	
+	9.	NoSuchFrameException:
+		thrown when trying to switch to a Frame which is not available in the webpage
+		
+	10. InvalidSwitchToTargetException:
+		thrown when frame or window target to be switched is not exist.
+	
+	11.	JavascriptException:
+		thrown when tying to execute JavaScript and it has an error
+		
+	12.	NoAlertPresentException:
+		thrown when trying to switch an alert which is not present on that time 
+		
+	13.	NoSuchAttributeException:
+		thrown when the attibute of the element could not be found
+		
+	14. NoSuchElementException:
+		- thrown when element not found
+		- when the given value is not found
+		
+	15.	NoSuchWindowException:
+		thrown when trying to switch to a window which is not available at that time
+		
+	16. RemoteDriverServerException:
+		- thrown when trying to connect to the driver with Selenium Grid and the connection could not be established then it throws exception
+	
+	17.	SessionNotCreatedException:
+		- thrown when selenum webdriver trying to start session for the first time and failed then it will throw an exception
+		- or when session is expired and user try to do some actions then it will throw 
+		
+	18.	StaleElementReferenceException:
+		- thrown when a reference to an element is now Stale (means that reference element is gone, not available in DOM)
+	
+	19.	TimeoutException:
+		- thrown when a command does not complete in enough time
+		
+	20.	unexpectedAlertPresentException:
+		- thrown when an enexpected alert present 
+		
+	21.	WebDriverException:
+		- based on the webdriver initialization
+		- Firefox or IE or chrome got updated but your selenium does not support
+	
+	22.	ArrayIndexOutOfBoundsException:
+	23.	UnHandledAlertException
+	24.	UnexpectedTagNameException:
+		- Thrown when a support class did not get an expected web element.
+	
+	25.	Unhandled exception type InterruptedException = when you don't provide throwable exception (Add throws decleration)
+	
+
+18.	JASON/XML:
+	these are the data collectors, any kind of data we can stoe in these two different formats, these are very light wait and standard languagaes/format to interfaces between APIs
+	
+		
+		
+		
+		
+		
+Job Application Qs:
+
+			As an Automation engineer i continue to learn and utilizing my skills and personal character to thrive in any position I hold, 
+			while striving to the company and contribute to its success
+		
+		As a Automation QA Engineer, there is a room to learn new technologies and grow in it, 
+		my future goal in few years is leading a QA team in some capacity.
+		
+		As a Automation tester, i am passionate to learn/improve skills and implement in my day to day job of testing a software product, 
+		in tester's career there is always a chance to write/improve the quality of the test scripts and i am passionate to do that.
+		
+		
+		
+		
+		As an Automation engineer i continue to learn and utilizing my skills and personal character to thrive in any position I hold, 
+		while striving to the company and contribute to its success.I am passionate to learn/improve skills and implement in my day to 
+		day job of testing a software product, in tester's career there is always a chance to write/improve the quality of the test scripts and i am excited to do that.

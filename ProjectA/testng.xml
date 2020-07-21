@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="FBTestSuite">
-  <test thread-count="5" name="FBTest">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
     <classes>
-      <class name="TestCases.LoginToFB"/>
+      <class name="RestClient_APITesting.Http_GET"/>
+      <class name="RestClient_APITesting.Http_GETwithHeaders"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

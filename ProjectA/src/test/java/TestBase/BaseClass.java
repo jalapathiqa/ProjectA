@@ -15,6 +15,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -69,20 +71,20 @@ public class BaseClass {
 		if (AppBrowser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/chromedriver.exe");
 			driver = new ChromeDriver();
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get(ApplURL);
-			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+			
 		} else if (AppBrowser.equalsIgnoreCase("ie")) {
-
-			driver = new ChromeDriver();
-			System.setProperty("webdriver.ie.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/IEDriverServers.exe");
-			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			driver.get(ApplURL);
-			driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-
+			System.setProperty("webdriver.ie.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
+			
+		}else if(AppBrowser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/geckodriver.exe");
+			driver = new FirefoxDriver();
 		}
+			
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get(ApplURL);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 
 	}
 
