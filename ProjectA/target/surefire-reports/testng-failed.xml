@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <test thread-count="5" verbose="0" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" verbose="0" name="LogintoFaceBook(failed)" parallel="classes">
     <classes>
+      <class name="selenium_docker_Grid.Setup_DockerGrid">
+        <methods>
+          <include name="verifyGridConsole"/>
+          <include name="ClosingGrid"/>
+          <include name="StartingGrid"/>
+        </methods>
+      </class> <!-- selenium_docker_Grid.Setup_DockerGrid -->
       <class name="TestCases.LoginToFB">
         <methods>
-          <include name="afterClass"/>
-          <include name="reunBeforeEverything"/>
-          <include name="afterMethod"/>
-          <include name="afterSuite"/>
-          <include name="ValidLoginTOFB"/>
           <include name="initializeBrowser"/>
-          <include name="beforeMethod"/>
+          <include name="runBeforeEverything"/>
+          <include name="closeBrowsers"/>
+          <include name="onCompleteTests"/>
+          <include name="ValidLoginTOFB"/>
+          <include name="beforeTests"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.LoginToFB -->
+      <class name="TestCases.LoginToFB_Grid">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="ValidLoginTOFB"/>
+        </methods>
+      </class> <!-- TestCases.LoginToFB_Grid -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- LogintoFaceBook(failed) -->
 </suite> <!-- Failed suite [Suite] -->

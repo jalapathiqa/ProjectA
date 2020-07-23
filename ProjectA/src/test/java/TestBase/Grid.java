@@ -6,7 +6,8 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -33,14 +34,13 @@ import ExcelUtils.Read_Excel;
 public class Grid {
 
 	public static String AplBrowser, AplUrl, AplUsername, AplPassword;
-	// protected ThreadLocal<RemoteWebDriver> threadedDriver = null;
-	protected RemoteWebDriver driver = null;
+	protected RemoteWebDriver driver ;
 
 	public static ExtentReports extent;
 	public static ExtentTest test;
 	public static Properties configProp;
 
-	public String filelocation = "C:\\Users\\Rishi\\git\\ProjectA\\ProjectA\\TestData\\DataDrivenExcel.xlsx";
+	public String filelocation = System.getProperty("user.dir")+"\\TestData\\DataDrivenExcel.xlsx";
 	public String sheetName = "TestSheet";
 	public Read_Excel getData = new Read_Excel(filelocation);
 
@@ -56,7 +56,7 @@ public class Grid {
 		AplUrl = configProp.getProperty("url");
 
 		extent = new ExtentReports();
-		extent.attachReporter(new ExtentHtmlReporter("./Reports/" + "Grid_Reports" + ".html"));
+		extent.attachReporter(new ExtentHtmlReporter("./Reports/" + "Grid_Reports"+" - "+ timeStamp()+".html"));
 
 	}
 
@@ -97,12 +97,13 @@ public class Grid {
 		if (result.getStatus() == ITestResult.SUCCESS) {
 			test.log(Status.PASS, "Testcase PASSED is: " + result.getMethod().getMethodName() + ".png");
 			test.info(result.getMethod().getMethodName());
+			
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File dest = new File(System.getProperty("user.dir")+"/ScreenShots_Pass");
+			File dest = new File(System.getProperty("user.dir")+"./ScreenShots_Pass"+result.getMethod().getMethodName()+" - "+ timeStamp()+".png");
 
 			try {
 				FileHandler.copy(src, dest);
-				test.addScreenCaptureFromPath(System.getProperty("user.dir")+"/ScreenShots_Pass");
+				test.addScreenCaptureFromPath(System.getProperty("user.dir")+"./ScreenShots_Pass"+result.getMethod().getMethodName()+" - "+ timeStamp()+".png");
 			} catch (IOException e) {
 				System.out.println("could not write screen shots" + e.getMessage());
 			}
@@ -111,17 +112,17 @@ public class Grid {
 			test.log(Status.FAIL, "Testcase FAILED is: " + result.getMethod().getMethodName() + ".png");
 			test.info(result.getMethod().getMethodName());
 			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-			File dest = new File(System.getProperty("user.dir")+"/ScreenShots_Fail");
+			File dest = new File(System.getProperty("user.dir")+"./ScreenShots_Fail"+result.getMethod().getMethodName()+" - "+ timeStamp()+".png");
 
 			try {
 				FileHandler.copy(src, dest);
-				test.addScreenCaptureFromPath(System.getProperty("user.dir")+"/ScreenShots_Fail");
+				test.addScreenCaptureFromPath(System.getProperty("user.dir")+"./ScreenShots_Fail"+result.getMethod().getMethodName()+" - "+ timeStamp()+".png");
 			} catch (IOException e) {
 				System.out.println("could not write screen shots" + e.getMessage());
 			}
 
 		} else {
-			test.log(Status.PASS, "Testcase SKIPPED is: " + result.getMethod().getMethodName() + ".png");
+			test.log(Status.PASS, "Testcase SKIPPED is: " + result.getMethod().getMethodName() +" - "+ timeStamp()+ ".png");
 			test.info(result.getMethod().getMethodName());
 		}
 	}
@@ -143,6 +144,10 @@ public class Grid {
 
 	public void setDriver(RemoteWebDriver driver) {
 		this.driver = driver;
+	}
+	
+	public String timeStamp() {
+		return new SimpleDateFormat("dd-MM-yyyy HH.mm.ss").format(new Date());
 	}
 
 }

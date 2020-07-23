@@ -1,0 +1,1 @@
+java -Dwebdrive.chrome.driver=C:\Selenium\Library\Selenium-Grid\chromedriver.exe -jar C:\Selenium\Library\Selenium-Grid\selenium-server-standalone-3.141.59.jar -role node -hub http://localhost:4444/grid/register -nodeConfig C:\Selenium\Library\Selenium-Grid\NodesConfig.json

@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="12995" started-at="2020-07-21T22:37:00Z" finished-at="2020-07-21T22:37:13Z">
+  <suite name="Default suite" duration-ms="26494" started-at="2020-07-23T23:19:10Z" finished-at="2020-07-23T23:19:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="12995" started-at="2020-07-21T22:37:00Z" finished-at="2020-07-21T22:37:13Z">
-      <class name="TestCases.LoginToFB">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="beforeSuite" is-config="true" duration-ms="228" started-at="2020-07-21T22:37:00Z" finished-at="2020-07-21T22:37:00Z">
+    <test name="Default test" duration-ms="26494" started-at="2020-07-23T23:19:10Z" finished-at="2020-07-23T23:19:36Z">
+      <class name="TestCases.LoginToFB_Grid">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="beforeSuite" is-config="true" duration-ms="169" started-at="2020-07-23T23:19:09Z" finished-at="2020-07-23T23:19:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="beforeClass" is-config="true" duration-ms="10783" started-at="2020-07-21T22:37:00Z" finished-at="2020-07-21T22:37:11Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="beforeClass" is-config="true" duration-ms="10371" started-at="2020-07-23T23:19:10Z" finished-at="2020-07-23T23:19:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="beforeMethod" is-config="true" duration-ms="16" started-at="2020-07-21T22:37:11Z" finished-at="2020-07-21T22:37:11Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="beforeMethod" is-config="true" duration-ms="12" started-at="2020-07-23T23:19:20Z" finished-at="2020-07-23T23:19:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void TestCases.LoginToFB.ValidLoginTOFB(java.lang.String,java.lang.String,java.lang.String)]]>
+                <![CDATA[public void TestCases.LoginToFB_Grid.ValidLoginTOFB(java.lang.String,java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="ValidLoginTOFB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="ValidLoginTOFB" duration-ms="813" started-at="2020-07-21T22:37:11Z" data-provider="FBLogin" finished-at="2020-07-21T22:37:12Z">
+        <test-method status="PASS" signature="ValidLoginTOFB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="ValidLoginTOFB" duration-ms="698" started-at="2020-07-23T23:19:20Z" data-provider="FBLogin" finished-at="2020-07-23T23:19:21Z">
           <params>
             <param index="0">
               <value>
@@ -47,26 +47,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidLoginTOFB -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="afterMethod" is-config="true" duration-ms="997" started-at="2020-07-21T22:37:12Z" finished-at="2020-07-21T22:37:13Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="afterMethod" is-config="true" duration-ms="14905" started-at="2020-07-23T23:19:21Z" finished-at="2020-07-23T23:19:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidLoginTOFB status=SUCCESS method=LoginToFB.ValidLoginTOFB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginToFB@6c64cb25] output={null}]]]>
+                <![CDATA[[TestResult name=ValidLoginTOFB status=SUCCESS method=LoginToFB_Grid.ValidLoginTOFB(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="afterClass" is-config="true" duration-ms="313" started-at="2020-07-21T22:37:13Z" finished-at="2020-07-21T22:37:13Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="afterClass" is-config="true" duration-ms="453" started-at="2020-07-23T23:19:36Z" finished-at="2020-07-23T23:19:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestCases.LoginToFB@6c64cb25]" name="afterSuite" is-config="true" duration-ms="423" started-at="2020-07-21T22:37:13Z" finished-at="2020-07-21T22:37:13Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestCases.LoginToFB_Grid@dd8ba08]" name="afterSuite" is-config="true" duration-ms="366" started-at="2020-07-23T23:19:36Z" finished-at="2020-07-23T23:19:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
-      </class> <!-- TestCases.LoginToFB -->
+      </class> <!-- TestCases.LoginToFB_Grid -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

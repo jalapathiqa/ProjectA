@@ -21,6 +21,10 @@
 	equitable bank:
 	trust and privacy by authenticating users, authorizing access to information resources and managing online identities.	
 
+
+CRM - Customer Relationship Management
+ERP - Enterprise resource planning
+
 Interview Qs:
 
 Project structure

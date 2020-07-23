@@ -1,0 +1,1 @@
+java -jar C:\Selenium\Library\Selenium-Grid\selenium-server-standalone-3.141.59.jar -role hub -hubConfig C:\Selenium\Library\Selenium-Grid\HUBConfig.json

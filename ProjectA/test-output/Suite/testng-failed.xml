@@ -1,52 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="6" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="6" name="Test1(failed)" parallel="tests">
-    <parameter name="browser" value="ie"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" name="LogintoFaceBook(failed)" parallel="classes">
     <classes>
       <class name="TestCases.LoginToFB">
         <methods>
-          <include name="afterClass"/>
-          <include name="reunBeforeEverything"/>
-          <include name="afterMethod"/>
-          <include name="afterSuite"/>
-          <include name="ValidLoginTOFB" invocation-numbers="0"/>
           <include name="initializeBrowser"/>
-          <include name="beforeMethod"/>
+          <include name="runBeforeEverything"/>
+          <include name="closeBrowsers"/>
+          <include name="onCompleteTests"/>
+          <include name="ValidLoginTOFB"/>
+          <include name="beforeTests"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- TestCases.LoginToFB -->
-    </classes>
-  </test> <!-- Test1(failed) -->
-  <test thread-count="6" name="Test2(failed)" parallel="tests">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="TestCases.LoginToFB">
+      <class name="TestCases.LoginToFB_Grid">
         <methods>
           <include name="afterClass"/>
-          <include name="reunBeforeEverything"/>
-          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="ValidLoginTOFB" invocation-numbers="0"/>
-          <include name="initializeBrowser"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- TestCases.LoginToFB -->
-    </classes>
-  </test> <!-- Test2(failed) -->
-  <test thread-count="6" name="Test(failed)" parallel="tests">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="TestCases.LoginToFB">
-        <methods>
-          <include name="afterClass"/>
-          <include name="reunBeforeEverything"/>
           <include name="afterMethod"/>
-          <include name="afterSuite"/>
-          <include name="ValidLoginTOFB" invocation-numbers="0"/>
-          <include name="initializeBrowser"/>
+          <include name="beforeClass"/>
           <include name="beforeMethod"/>
+          <include name="ValidLoginTOFB"/>
         </methods>
-      </class> <!-- TestCases.LoginToFB -->
+      </class> <!-- TestCases.LoginToFB_Grid -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- LogintoFaceBook(failed) -->
 </suite> <!-- Failed suite [Suite] -->

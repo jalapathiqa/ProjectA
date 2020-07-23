@@ -2,20 +2,16 @@ package TestBase;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.security.Timestamp;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.FileHandler;
 
-import org.codehaus.groovy.runtime.metaclass.MethodMetaProperty.GetMethodMetaProperty;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -24,9 +20,11 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -72,7 +70,6 @@ public class BaseClass_Grid {
 
 		extent = new ExtentReports();
 		extent.attachReporter(new ExtentHtmlReporter("./Reports/" + "GridExtentReport" + timeStamp() + ".html"));
-
 	}
 
 	@BeforeClass
@@ -85,13 +82,18 @@ public class BaseClass_Grid {
 		setTestCaseName(this.getClass().getSimpleName());
 
 		if (ApplBrowser.equalsIgnoreCase("chrome")) {
+			// System.setProperty("webdriver.chrome.driver",
+			// "C:/Users/Rishi/Desktop/SeleniumLibrary/chromedriver.exe");
 			DesiredCapabilities cap = DesiredCapabilities.chrome();
+
+			// cap.setCapability("platform", "Windows 10");
+			// cap.setCapability("version", "");
 			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
 			threadedDriver.set(driver);
 
 		} else if (ApplBrowser.equalsIgnoreCase("ie")) {
 			DesiredCapabilities cap = DesiredCapabilities.internetExplorer();
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+			driver = new RemoteWebDriver(new URL("https://localhost:4444/wd/hub"), cap);
 			threadedDriver.set(driver);
 		}
 
@@ -100,6 +102,7 @@ public class BaseClass_Grid {
 		driver.get(ApplUrl);
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
+
 	}
 
 	@BeforeMethod
@@ -162,8 +165,31 @@ public class BaseClass_Grid {
 
 	}
 
+//	@BeforeTest
+//	public void StartingHUB() throws IOException, InterruptedException {
+//		Runtime.getRuntime()
+//				.exec("cmd /c start C:\\Users\\Rishi\\Desktop\\SeleniumLibrary\\Selenium-Grid\\HUB-Copy.bat");
+//		Thread.sleep(10000);
+//		System.out.println("selenium Grid HUB started");
+//	}
+//	public void StartingNodes() throws IOException, InterruptedException {
+//		Runtime.getRuntime().exec(
+//				"cmd /c start C:\\Users\\Rishi\\Desktop\\SeleniumLibrary\\Selenium-Grid\\NodeRun_Chrome-Copy.bat");
+//		System.out.println("selenium Grid Nodes started");
+//		Thread.sleep(10000);
+//	}
+//
+//	@AfterTest
+//	public void ClosingGrid() throws IOException, InterruptedException {
+//		try {
+//			Runtime.getRuntime().exec("taskkill /im cmd.exe");
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//	}
+
 	public String timeStamp() {
-		return new SimpleDateFormat("MM/dd/yyyy HH.mm.ss").format(new Date());
+		return new SimpleDateFormat("dd-MM-yyyy HH.mm.ss").format(new Date());
 
 	}
 
