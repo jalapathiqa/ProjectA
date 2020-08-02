@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
-  <test thread-count="5" name="LogintoFaceBook(failed)" parallel="classes">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="TestCases.LoginToFB">
+      <class name="TestCases.LoginToGmail">
         <methods>
-          <include name="initializeBrowser"/>
-          <include name="runBeforeEverything"/>
-          <include name="closeBrowsers"/>
-          <include name="onCompleteTests"/>
-          <include name="ValidLoginTOFB"/>
-          <include name="beforeTests"/>
-          <include name="tearDown"/>
+          <include name="GmailLogin"/>
         </methods>
-      </class> <!-- TestCases.LoginToFB -->
-      <class name="TestCases.LoginToFB_Grid">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="afterMethod"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="ValidLoginTOFB"/>
-        </methods>
-      </class> <!-- TestCases.LoginToFB_Grid -->
+      </class> <!-- TestCases.LoginToGmail -->
     </classes>
-  </test> <!-- LogintoFaceBook(failed) -->
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
