@@ -13,17 +13,17 @@ public class CrossBrowserTesting {
 	WebDriver driver;
 	@Test
 	@Parameters("browser")
-	public void initializeBrowser(String browserName) {
+	public void initializeBrowser(String browser) {
 		
-		if (browserName.equalsIgnoreCase("chrome")) {
+		if (browser.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/chromedriver.exe");
 			driver = new ChromeDriver();
 			
-		} else if (browserName.equalsIgnoreCase("ie")) {
+		} else if (browser.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			
-		}else if(browserName.equalsIgnoreCase("firefox")) {
+		}else if(browser.equalsIgnoreCase("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "C:/Users/Rishi/Desktop/SeleniumLibrary/geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
